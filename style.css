@@ -1,0 +1,293 @@
+@font-face {
+    font-family: Spider-Man;
+    src: url("fonts/Spider-Man.otf")  format("opentype");
+}
+
+@font-face {
+    font-family: Russo One;
+    src: url("fonts/RussoOne-Regular.ttf")  format("opentype");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Russo One', sans-serif;
+}
+
+html{
+    font-size: 25px;
+}
+h1{
+    font-size: 3rem;
+    line-height: 3rem;
+    font-family: Spider-Man;
+}
+h2{
+    font-size: 2rem;
+    line-height: 2rem;
+}
+h3{
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+:root{
+    --bg_color:#222222;
+    --container_color:#000000;
+    --morales_color:#403E93;
+    --gwen_color:#EC9DF9;
+    --parker_colo1:#FF2D2D;
+    --parker_color2:#093FFF;
+    --pig_color:#13A39A;
+    --penny_color:#F21198;
+    --black_accent:#000000;
+    --white_accent:#ffffff;
+}
+
+body{
+    background: var(--bg_color);
+}
+.site-container {
+    background: var(--container_color);
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 1007px;
+    width: 100%;
+}
+
+.header {
+    background: url('img/header.png') center/cover no-repeat;
+    width: 100%;
+    height: 693px;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+.header__title {
+    width: 50%;
+    padding: 58px;
+    background: var(--container_color);
+    color: white;
+}
+
+.main_morales {
+    background: url('img/morales.png') center/cover no-repeat;
+    grid-area: morales;
+}
+.main_gwen {
+    background: url('img/gwen.png') center/cover no-repeat;
+    grid-area: gwen;
+}
+.main_parker {
+    background: url('img/parker.png') center/cover no-repeat;
+    grid-area: parker;
+}
+.main_pig {
+    background: url('img/spiderpig.png') center/cover no-repeat;
+    grid-area: pig;
+}
+.main_noir {
+    background: url('img/noir.png') center/cover no-repeat;
+    grid-area: noir;
+    position: relative;
+}
+.main_penny {
+    background: url('img/penni.png') center/cover no-repeat;
+    grid-area: penny;
+}
+.main_robot {
+    background: url('img/spiderbot.png') center/cover no-repeat;
+    grid-area: robot;
+}
+.main_trio {
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68)), 
+    url('img/trio.png') center/cover no-repeat;
+    grid-area: trio;
+    align-items: flex-end;
+    justify-content: flex-end;
+    text-align: right;
+}
+.main_all-team {
+    background: url('img/allteam.png') center/cover no-repeat;
+    grid-area: all;
+    position: relative;
+}
+.main_versus {
+    background: url('img/versus.png') center/cover no-repeat;
+    grid-area: versus;
+    align-items: flex-end;
+    text-align: right;
+    justify-content: flex-end;
+}
+.main_kingpin {
+    background: url('img/kingpin.png') center/cover no-repeat;
+    grid-area: kingpin;
+    align-items: flex-end;
+    text-align: center;
+}
+.main_free-fall {
+    background: url('img/freefall.png') center/cover no-repeat;
+    grid-area: fall;
+}
+
+.main {
+    display: grid;
+    grid-template-rows: repeat(11, 218px);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "morales morales gwen gwen"
+                         "parker parker gwen gwen"
+                         "parker parker pig ."
+                         "noir penny penny robot"
+                         "noir trio trio trio"
+                         "all all all all"
+                         "all all all all"
+                         ". versus versus versus"
+                         "kingpin kingpin kingpin fall"
+                         "kingpin kingpin kingpin fall"
+                         "kingpin kingpin kingpin .";
+    gap:20px;
+
+}
+.main__text {
+    color: var(--white_accent);
+}
+
+.main_morales-text {
+    color: var(--morales_color);
+    text-shadow: 5px 5px 0px var(--black_accent);
+}
+ 
+.main_gwen-text {
+    color: var(--white_accent);
+    text-shadow: -5px 5px 0px var(--gwen_color);
+    margin-left: auto;
+}
+ 
+.main_parker-text {
+    color: var(--parker_colo1);
+    text-shadow: 4px 4px 0px var(--parker_color2);
+    width: 50%;
+    align-self: flex-end;
+}
+ 
+.main_pig-text {
+    color: var(--white_accent); 
+    text-shadow: 5px 5px 0px var(--pig_color);
+    align-self: flex-end;
+    font-size: 1rem;
+    margin-left: auto;
+}
+ 
+.main_noir-text {
+    color: var(--black_accent);
+    text-shadow: 5px -4px 0px var(--white_accent), 
+    -5px 5px 0px var(--white_accent);
+    position: absolute;
+    transform: rotate(90deg);
+    transform-origin: 20px 20px;
+    width: 400px;
+    text-align: center;
+    left: 20px;
+
+}
+ 
+.main_penny-text {   
+    color: var(--penny_color);
+    text-shadow: 5px 5px 0px var(--white_accent);
+    align-self: flex-end;
+    margin: 0 auto;
+}
+ 
+.main_robot-text {
+    color: var(--white_accent);
+    text-shadow: 5px 4px 0px var(--penny_color);
+    font-size: 1rem;
+    margin-left: auto;
+    text-align: right;
+    align-self: flex-end;
+}
+ 
+
+.main__item{
+   padding: 20px;
+   display: flex;
+}
+
+.main_all-team .main__text{
+    width: 50%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(20px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 100px 37px;
+}
+
+
+@media (max-width:670px) {
+    .main {
+        width: 100%;
+        display: grid;
+        grid-template-rows: repeat(16, 237px);
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: "morales"
+                            "gwen"
+                             "parker"
+                             "pig"
+                             "noir"
+                             "noir"
+                             "penny"
+                             "robot"
+                             "trio"
+                             "all"
+                             "versus"
+                             "kingpin"
+                             "kingpin"
+                             "fall"
+                             "fall"
+                             "fall";
+        gap:20px;
+    }
+    .main_gwen-text {
+        margin-left: 0;
+    }
+    .main_parker-text {
+        align-self: flex-start;
+    }
+    .main_pig-text {
+        align-self: flex-start;
+        font-size: 2rem;
+        margin-left: 0;
+    }
+    .main_noir-text {
+        transform: rotate(0deg) translateX(-50%);
+        bottom: 10px;
+        top: auto;
+        left: 50%;
+    }
+    .main_penny-text { 
+        margin-left: 0;
+        width: 50%;
+    }
+    .main_robot-text {
+        font-size: 2rem;
+    }
+    .main_all-team .main__text{
+        width: 100%;
+        height: 50%;
+        bottom: 0;
+        top: auto;
+        font-size: 1rem;
+        padding: 0;
+    }
+    .header__title{
+        justify-content: center;
+        align-self: center;
+    }
+    .header__title
+    {
+        width: 100%;
+    }
+}
